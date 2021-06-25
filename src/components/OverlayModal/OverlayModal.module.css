@@ -1,0 +1,60 @@
+.overlay-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 32rem;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-color);
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+  z-index: 500;
+  visibility: hidden;
+  border-radius: 2px;
+  display: none;
+  transition: all 0.2s;
+}
+
+.overlay-modal.visible {
+  display: block;
+  visibility: visible;
+}
+
+.overlay-modal__close-btn {
+  all: unset;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1);
+  transition: all 0.2s;
+}
+.overlay-modal__close-btn:hover,
+.overlay-modal__close-btn:focus,
+.overlay-modal__close-btn:active {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 37rem) {
+  .overlay-modal {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 28rem) {
+  .overlay-modal {
+    max-width: 95%;
+  }
+  .overlay-modal__close-btn {
+    top: 0.8rem;
+    right: 0.8rem;
+    width: 18px;
+    height: 18px;
+  }
+}

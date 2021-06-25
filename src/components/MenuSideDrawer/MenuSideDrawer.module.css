@@ -1,0 +1,73 @@
+.menusidedrawer {
+  position: fixed;
+  top: 0rem;
+  right: 0rem;
+  z-index: 400;
+  width: 70%;
+  height: 100%;
+  background-color: var(--primary-color);
+  transform: translateX(5000px);
+  transition: transform 0.7s;
+}
+
+.menusidedrawer.open {
+  transform: translateX(0px);
+}
+
+.menu-close-btn {
+  all: unset;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1);
+  transition: all 0.2s;
+}
+.menu-close-btn:hover,
+.menu-close-btn:focus,
+.menu-close-btn:active {
+  transform: scale(1.1);
+}
+
+.menu-list {
+  list-style-type: none;
+  margin: 2rem auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 80%;
+  height: 90%;
+  justify-items: center;
+  align-content: center;
+}
+
+.menu-list-item {
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: rgb(44 44 44 / 75%);
+  border: none;
+  font-weight: 400;
+}
+
+.menu-list-item button {
+  all: unset;
+  cursor: pointer;
+  color: rgb(44 44 44 / 80%);
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.menu-list-item button:hover,
+.menu-list-item button:focus,
+.menu-list-item button:active {
+  color: var(--secondary-color);
+  border-bottom: 1px solid var(--secondary-color);
+}

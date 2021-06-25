@@ -1,0 +1,12 @@
+.pixily-logo {
+  width: 8.6rem;
+  height: 3.6rem;
+  transition: all 0.2s;
+}
+
+@media screen and (max-width: 28rem) {
+  .pixily-logo {
+    width: 6rem;
+    height: 2.6rem;
+  }
+}

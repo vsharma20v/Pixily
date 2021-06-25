@@ -1,0 +1,24 @@
+.homephotogrid {
+  flex: 1;
+}
+
+.homephotogrid-error__message {
+  color: var(--error-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0px auto;
+  word-spacing: 0.5px;
+  letter-spacing: 0.5px;
+}
+
+.homephotogrid-container {
+  position: relative;
+}
+
+@media screen and (max-width: 43rem) {
+  .homephotogrid {
+    display: none;
+  }
+}

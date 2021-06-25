@@ -1,0 +1,16 @@
+.backdrop {
+  position: fixed;
+  left: 0rem;
+  top: 0rem;
+  height: 100%;
+  width: 100%;
+  z-index: 300;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 1s ease;
+}
+
+.backdrop.visible {
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.8);
+}

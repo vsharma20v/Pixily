@@ -1,0 +1,152 @@
+.signin {
+  color: var(--secondary-color);
+}
+
+.signin-heading {
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  margin: 0rem auto;
+  font-weight: 400;
+  transition: all 0.2s;
+}
+
+.signin-form {
+  margin: 0rem auto;
+  padding: 0rem 2rem;
+  width: 100%;
+  transition: all 0.2s;
+}
+
+.signin-form-control {
+  margin: 1.5rem auto;
+  transition: margin 0.2s;
+}
+
+.signin-form-input {
+  display: block;
+  padding: 0.6rem;
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: 2px;
+  background-color: var(--bg-color);
+  box-shadow: var(--box-shadow);
+  color: inherit;
+  font-size: 14px;
+  font-family: inherit;
+  margin: 0.2rem auto;
+  width: 100%;
+  transition: all 0.2s;
+}
+
+.signin-form-input.invalid {
+  border-color: var(--error-color);
+}
+
+.signin-form-control-password__container {
+  position: relative;
+}
+
+.signin-form-toggle-password-btn {
+  all: unset;
+  position: absolute;
+  cursor: pointer;
+  top: calc(50% - 12px);
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+  transition: all 0.2s;
+}
+
+.signin-form-toggle-password-btn > svg path {
+  fill-opacity: 0.5;
+  transition: fill-opacity 0.2s;
+}
+
+.signin-form-toggle-password-btn:hover > svg path {
+  fill-opacity: 0.7;
+}
+
+.signin-form-error {
+  color: var(--error-color);
+  display: block;
+  margin: 0px auto;
+  font-size: 0.75rem;
+  visibility: hidden;
+  display: none;
+  transition: all 0.2s;
+}
+
+.signin-form-error.visible {
+  display: block;
+  visibility: visible;
+}
+
+.signin-form-submit-btn {
+  display: block;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--secondary-color);
+  outline: none;
+  margin: 0rem;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  text-align: center;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-radius: 2px;
+  width: 100%;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.signin-form-submit-btn:disabled {
+  cursor: not-allowed;
+}
+
+.signin-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 2rem;
+  transition: all 0.2s;
+}
+
+.signin-footer-signup-link {
+  all: unset;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 37rem) {
+  .signin-heading {
+    font-size: 1.2rem;
+  }
+  .signin-form-input {
+    padding: 0.4rem;
+  }
+  .signin-form-submit-btn {
+    padding: 0.4rem;
+  }
+  .signin-footer {
+    font-size: 14.5px;
+  }
+}
+@media screen and (max-width: 28rem) {
+  .signin-heading {
+    padding: 0.5rem 1rem;
+  }
+  .signin-form {
+    padding: 0rem 1rem;
+  }
+  .signin-form-toggle-password-btn {
+    width: 20px;
+    height: 20px;
+    top: calc(50% - 10px);
+    right: 4px;
+  }
+
+  .signin-footer {
+    padding: 0rem 1rem;
+  }
+}

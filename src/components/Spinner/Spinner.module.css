@@ -1,0 +1,34 @@
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.spinner-loader {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  border-width: 2px;
+  border-style: solid;
+  border-top-color: var(--primary-color);
+  border-right-color: var(--primary-color);
+  border-bottom-color: transparent;
+  border-left-color: var(--primary-color);
+  background: transparent;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 450;
+  visibility: hidden;
+  display: none;
+  transition: visibility 0.2s;
+  animation: spin 0.75s linear 0s infinite;
+}
+
+.spinner-loader.visible {
+  visibility: visible;
+  display: block;
+}

@@ -1,0 +1,29 @@
+.progressbar {
+  height: 100%;
+  border-radius: inherit;
+  visibility: hidden;
+  width: 100%;
+  background-color: rgb(0 0 0 / 70%);
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  z-index: 5;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: var(--primary-color);
+  font-weight: 300;
+  transition: all 0.2s;
+}
+
+.progressbar.visible {
+  visibility: visible;
+}
+
+@media screen and (max-width: 28rem) {
+  .progressbar {
+    font-size: 2rem;
+  }
+}

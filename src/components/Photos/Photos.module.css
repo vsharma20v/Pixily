@@ -1,0 +1,20 @@
+.photos {
+  display: grid;
+  padding: 0rem;
+  margin: 0rem;
+  grid-auto-rows: 0.3rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(16rem, 100%), 1fr));
+  gap: 1.8rem;
+  padding-bottom: 2rem;
+}
+
+.photos-homepage {
+  position: absolute;
+  top: 0rem;
+  top:-5rem;
+  gap: 1.2rem;
+  grid-template-columns: repeat(3, 1fr);
+  left: 3rem;
+  width: 45rem;
+  padding-bottom: 0rem;
+}

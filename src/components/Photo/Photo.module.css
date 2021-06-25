@@ -1,0 +1,158 @@
+.photo {
+  list-style-type: none;
+  margin: 0rem;
+  padding: 0rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: none;
+  transition: box-shadow 1s ease;
+}
+
+.photo.box-shadow {
+  box-shadow: var(--box-shadow);
+}
+
+.photo.span-9 {
+  grid-row-end: span 9;
+}
+
+.photo.span-7 {
+  grid-row-end: span 7;
+}
+
+.photo.span-5 {
+  grid-row-end: span 5;
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -135% 0%;
+  }
+}
+
+.photo-img__container {
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-90deg, #f8f8f8 0%, #f0f0f0 50%, #f8f8f8 100%);
+  background-size: 400% 400%;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: inherit;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.photo-favourite__btn {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photo-favourite__btn > svg {
+  transform: scale(1);
+  transition: all 0.2s;
+}
+.photo-favourite__btn:hover > svg {
+  transform: scale(1.1);
+}
+
+.photo-favourite__btn > svg path {
+  fill: var(--primary-color);
+  transition: fill 0.2s;
+}
+
+.photo-favourite__btn:hover > svg path {
+  fill: #db133a;
+}
+
+.photo-favourite__remove-btn {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-favourite__remove-btn > svg {
+  transform: scale(1);
+  transition: all 0.2s;
+}
+.photo-favourite__remove-btn:hover > svg {
+  transform: scale(1.1);
+}
+
+.photo-favourite__remove-btn > svg path {
+  stroke: var(--primary-color);
+  stroke-width: 2px;
+  transition: stroke 0.2s;
+}
+
+.photo-favourite__remove-btn:hover > svg path {
+  stroke: var(--secondary-color);
+}
+
+.photo-username {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  padding: 8px 10px;
+  border-radius: 0px 4px 0px 0px;
+  font-size: 12px;
+  color: var(--primary-color);
+}
+
+.photo-username a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.photo-download_btn {
+  all: unset;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.photo-download__btn > svg {
+  transform: scale(1);
+  transition: all 0.2s;
+}
+.photo-download_btn:hover > svg {
+  transform: scale(1.1);
+}
+
+.photo-download_btn > svg path {
+  fill: var(--primary-color);
+  transition: fill 0.2s;
+}
+
+.photo-download_btn:hover > svg path {
+  fill: var(--secondary-color);
+}
